@@ -4,9 +4,11 @@
 }
 
 body {
+  width: 1100px; /* Ширина макета по ТЗ */
+  margin: 0 auto; /* Центрирование */
   background-color: #ffffff;
   color: #000000;
-  margin: 0 auto;
+  font-family: Raleway; /* Шрифт задан глобально */
 }
 
 /* СБРОС СПИСКОВ */
@@ -119,8 +121,7 @@ body {
   font-weight: 400;
   line-height: 1.1;
   text-transform: uppercase;
-  letter-spacing: 20px;
-  font-family: Raleway;
+  letter-spacing: 30px; /* Вернули 30px, как в макете */
 }
 
 .aligned-text {
@@ -137,6 +138,7 @@ body {
 
 .aligned-text_right {
   text-align: right;
+  margin-right: -30px; /* Гасим лишний отступ от letter-spacing справа */
 }
 
 .cover__description {
@@ -145,19 +147,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
 }
 
 .cover__description-text {
   margin: 0;
   color: #ffffff;
   font-size: 22px;
-  word-spacing: 10px;
+  word-spacing: 18px;
   text-transform: uppercase;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  font-family: Raleway;
 }
 
 .bet-button {
@@ -168,7 +165,7 @@ body {
   font-size: 22px;
   text-transform: uppercase;
   cursor: pointer;
-  font-family: Raleway;
+  font-family: inherit;
 }
 
 /* --- ЛОТЫ --- */
@@ -181,7 +178,6 @@ body {
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: Raleway;
 }
 
 .lots__card-list {
@@ -193,7 +189,7 @@ body {
 
 .lots__card-list-item {
   width: calc((100% - 50px) / 3);
-  min-height: 500px;
+  min-height: 596px; /* Точная высота карточки из макета */
 }
 
 .card-link {
@@ -209,7 +205,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 30px;
+  padding: 48px 40px; /* Точные отступы внутри карточки */
 }
 
 .card_type_film {
@@ -239,7 +235,8 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.2;
-  font-family: Raleway;
+  text-decoration: underline; /* В макете заголовки подчеркнуты */
+  text-underline-offset: 4px;
 }
 
 .card__text {
@@ -248,14 +245,13 @@ body {
   margin: 0;
   color: #ffffff;
   font-size: 20px;
-  line-height: 1.3;
-  font-family: Raleway;
+  line-height: 1.2;
 }
 
 .lots__look-more-link {
   display: inline-block;
   margin-left: 40px;
-  font-size: 18px;
+  font-size: 20px;
   text-decoration: underline;
   color: #000000;
 }
@@ -263,9 +259,9 @@ body {
 /* --- СЕКЦИЯ "ОБ АУКЦИОНЕ" --- */
 .about {
   display: grid;
-  grid-template-columns: 350px 1fr;
-  gap: 50px;
-  padding: 120px 50px;
+  grid-template-columns: 300px 1fr; /* Точная ширина колонок */
+  gap: 72px;
+  padding: 120px 50px 180px;
 }
 
 .about__column_left {
@@ -275,8 +271,8 @@ body {
 }
 
 .about__logo {
-  width: 300px;
-  height: 300px;
+  width: 240px;
+  height: 240px;
   background-color: #000000;
   border-radius: 50%;
   display: flex;
@@ -285,7 +281,7 @@ body {
 }
 
 .about__logo-image {
-  width: 160px;
+  width: 140px;
 }
 
 .about__title {
@@ -293,16 +289,14 @@ body {
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: Raleway;
 }
 
 .about__text {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  font-size: 18px;
+  gap: 24px;
+  font-size: 20px;
   line-height: 1.4;
-  font-family: Raleway;
 }
 
 .about__text p {
@@ -314,7 +308,7 @@ body {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: start;
-  padding: 50px 50px 100px;
+  padding: 0 50px 90px;
 }
 
 .footer__address {
